@@ -8,6 +8,7 @@ int k= zero;
 int b_num = zero;
 int s_num = zero;
 
+//Input two numbers and perform artihmetic operations. 
 int main(void)
 {
 	scanf("%d %d",&i, &k);
