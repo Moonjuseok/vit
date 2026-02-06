@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 
 #define zero 0
 
@@ -11,64 +12,66 @@ int main(void)
 {
 	scanf("%d %d",&i, &k);
 
-	if(i>=k){
+	if(i>=k)
+	{
 		b_num = i;
 		s_num = k;
 	}
-	else{
+	else
+	{
 		b_num = k;
 		s_num = i;
 	}
 
-	printf("합계: %d\n", s_add(b_num,s_num));
-	printf("차이: %d\n", s_sub(b_num,s_num));
-	printf("곱: %d\n", s_mul(b_num,s_num));
-	printf("나누기: %d\n", s_div(b_num,s_num));
-	printf("몫: %d\n", s_quo(b_num,s_num));
-	printf("나머지: %d\n", s_remain(b_num,s_num));
+	printf("%d + %d = %d\n", b_num, s_num, s_add(b_num,s_num));
+	printf("%d - %d = %d\n", b-num, s_num, s_sub(b_num,s_num));
+	printf("%d x %d = %d\n", b_num, s_num, s_mul(b_num,s_num));
+	printf("%d / %d = %.2f\n", b_num, s_num, s_div(b_num,s_num));
+	printf("%d % %d = %d\n", b_num. s_num, s_quo(b_num,s_num));
+	printf("%d %% %d = %d\n", b_num, s_num, s_remain(b_num,s_num));
+
 	return 0;
 }
 
-//합계
+//addition 
 int s_add(int a, int b)
 {
 	int c;
 	c=a+b;
 	return c;
 }
-//차이
+//subtract
 int s_sub(int a, int b)
 {
 	int c;
 	c=a-b;
 	return c;  
 }
-//곱
+//multiplication
 int s_mul(int a, int b)
 {
 	int c;
 	c=a*b;
 	return c;
 }
-//나누기
-float s_div(int a, int b)
+//division
+int s_div(int a, int b)
 {
-	float c;
+	double c;
 	c=a/b;
 	return c;
 }
-//몫
+//quotient
 int s_quo(int a, int b)
 {
 	int c;
 	c=a%b;
 	return c;
 }
-//나머지
-float s_remain(int a, int b)
+//remainder
+int s_remain(int a, int b)
 {
 	int c;
-	c=a/b-a%b;
+	c=fmod(a,b);
 	return c;
 }
-
