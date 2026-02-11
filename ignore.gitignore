@@ -1,0 +1,8 @@
+#Ignore files from Git to Github
+
+#Prevent pushing unwanted files to Github
+
+*.pdb
+
+#To stop tracking files via command line without deleting them, use "git rm --cached *.extention."
+
