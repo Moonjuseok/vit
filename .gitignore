@@ -4,5 +4,5 @@
 
 *.pdb
 
-#To stop tracking files via command line without deleting them, use "git rm --cached *.extention."
+#To stop tracking files via command line without deleting them, use "git rm --cached *.extention".
 
